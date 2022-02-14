@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="5.0.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Blazor.MultiMicroFE.SecondClient\Blazor.MultiMicroFE.SecondClient.csproj" />
+    <ProjectReference Include="..\..\Blazor.MultiMicroFE.ThirdClient\Blazor.MultiMicroFE.ThirdClient.csproj" />
+    <ProjectReference Include="..\Client\Blazor.MultiMicroFE.Client.csproj" />
+    <ProjectReference Include="..\Shared\Blazor.MultiMicroFE.Shared.csproj" />
+  </ItemGroup>
+
+
+</Project>
