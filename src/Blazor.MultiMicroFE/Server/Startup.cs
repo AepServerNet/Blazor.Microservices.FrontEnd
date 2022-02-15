@@ -75,6 +75,20 @@ namespace Blazor.MultiMicroFE.Server
                     endpoints.MapFallbackToFile("ThirdApp/{*path:nonfile}", "ThirdApp/index.html");
                 });
             });
+
+            app.MapWhen(ctx => !ctx.Request.Path.StartsWithSegments("/FirstApp") || !ctx.Request.Path.StartsWithSegments("/SecondApp") 
+                            || !ctx.Request.Path.StartsWithSegments("/ThirdApp"), neutral =>
+            {
+                neutral.UseBlazorFrameworkFiles();
+                neutral.UseStaticFiles();
+
+                neutral.UseRouting();
+                neutral.UseEndpoints(endpoints =>
+                {
+                    endpoints.MapControllers();
+                    endpoints.MapFallbackToFile("{*path:nonfile}", "index.html");
+                });
+            });
         }
     }
 }

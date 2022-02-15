@@ -4,11 +4,11 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Blazor.MultiMicroFE.Server.Controllers
 {
     [ApiController]
+    [Route("[controller]")]
     [Route("FirstApp/[controller]")]
     [Route("SecondApp/[controller]")]
     [Route("ThirdApp/[controller]")]

@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Blazor.MultiMicroFE.FirstClient\Blazor.MultiMicroFE.FirstClient.csproj" />
     <ProjectReference Include="..\..\Blazor.MultiMicroFE.SecondClient\Blazor.MultiMicroFE.SecondClient.csproj" />
     <ProjectReference Include="..\..\Blazor.MultiMicroFE.ThirdClient\Blazor.MultiMicroFE.ThirdClient.csproj" />
     <ProjectReference Include="..\Client\Blazor.MultiMicroFE.Client.csproj" />
